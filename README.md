@@ -11,6 +11,17 @@ A Flutter plugin for adding native reminders to the iOS Reminders app using `Eve
 
 ---
 
+## ⚠️ iOS Setup Required
+
+To run this plugin on iOS, you **must** add the following to your `ios/Runner/Info.plist` file:
+
+```xml
+<key>NSRemindersUsageDescription</key>
+<string>Your usage description</string>
+```
+
+---
+
 ## ✨ Features
 
 | Feature             | Supported |
