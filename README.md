@@ -37,4 +37,4 @@ To run this plugin on iOS, you **must** add the following to your `ios/Runner/In
 
 ```yaml
 dependencies:
-  in_app_reminder: ^0.0.1
+  in_app_reminder: ^0.0.3
