@@ -22,7 +22,7 @@ A Flutter plugin for adding native reminders to the iOS Reminders app using `Eve
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```yaml
 dependencies:
