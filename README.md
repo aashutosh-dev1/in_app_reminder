@@ -1,15 +1,29 @@
 # in_app_reminder
 
-A new Flutter plugin project.
+Flutter verson: 3.29.2
 
-## Getting Started
+A Flutter plugin for adding native reminders to the iOS Reminders app using `EventKit`.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+- ✅ Set title and notes
+- ✅ Add date and time
+- ✅ Set daily, weekly, monthly, or yearly repeat
+- ❌ Android support: coming soon
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
 
+## ✨ Features
+
+| Feature             | Supported |
+|---------------------|-----------|
+| iOS Reminders       | ✅        |
+| Repeat options      | ✅        |
+| Time-based alarm    | ✅        |
+| Android support     | ❌ Coming soon |
+
+---
+
+## 🚀 Installation
+
+```yaml
+dependencies:
+  in_app_reminder: ^0.0.1
