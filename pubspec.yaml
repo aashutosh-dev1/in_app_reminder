@@ -1,0 +1,29 @@
+name: in_app_reminder
+description: >
+  A Flutter plugin for creating native reminders on iOS using the Reminders app.
+  Supports scheduling with title, notes, time, and repeat intervals. iOS only for now.
+version: 0.0.1
+homepage: https://github.com/yourusername/in_app_reminder
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  plugin:
+    platforms:
+      ios:
+        pluginClass: InAppReminderPlugin
+      # Android is not yet supported, but reserved for future
+      # android:
+      #   package: com.nextgenapps.inAppReminder.in_app_reminder
+      #   pluginClass: InAppReminderPlugin
