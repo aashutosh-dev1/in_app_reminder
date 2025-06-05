@@ -1,40 +1,43 @@
-# in_app_reminder
+# In-App Reminder
 
-Flutter verson: 3.29.2
+A Flutter plugin for creating native reminders in the iOS Reminders app using `EventKit`.
 
-A Flutter plugin for adding native reminders to the iOS Reminders app using `EventKit`.
+This plugin allows Flutter applications to seamlessly integrate with the iOS Reminders app, enabling users to set reminders directly from within your app.
 
-- ✅ Set title and notes
-- ✅ Add date and time
-- ✅ Set daily, weekly, monthly, or yearly repeat
-- ❌ Android support: coming soon
+## Features
 
----
+* **iOS Reminders Integration:** Create reminders that appear in the native iOS Reminders application.
+* **Reminder Details:** Set a title and descriptive notes for each reminder.
+* **Scheduled Alarms:** Specify a date and time for the reminder to trigger.
+* **Recurrence Rules:** Configure reminders to repeat daily, weekly, monthly, or yearly.
 
-## ⚠️ iOS Setup Required
+## iOS Setup
 
-To run this plugin on iOS, you **must** add the following to your `ios/Runner/Info.plist` file:
+To enable reminder functionality on iOS, you must include the `NSRemindersUsageDescription` key in your `ios/Runner/Info.plist` file. Provide a clear explanation for why your app requires access to the user's reminders.
 
 ```xml
 <key>NSRemindersUsageDescription</key>
-<string>Your usage description</string>
+<string>This app needs access to your reminders to add new reminders directly from the app.</string>
 ```
 
----
+## Platform Support
 
-## ✨ Features
-
-| Feature             | Supported |
-|---------------------|-----------|
-| iOS Reminders       | ✅        |
-| Repeat options      | ✅        |
-| Time-based alarm    | ✅        |
-| Android support     | ❌ Coming soon |
-
----
+| Feature         | Supported      |
+|-----------------|----------------|
+| iOS Reminders   | ✅             |
+| Android Support | ❌ Coming soon |
 
 ## Installation
 
+Add `in_app_reminder` to your `pubspec.yaml` file:
+
 ```yaml
 dependencies:
-  in_app_reminder: ^0.0.3
+  in_app_reminder: ^0.0.4
+```
+
+Then, run `flutter pub get` to install the package.
+
+## Future Development
+
+* Android support is planned for a future release.
