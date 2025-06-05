@@ -1,3 +1,7 @@
+## [0.0.4] - 2025-06-05
+- Implemented documentation for code and improved readme file.
+
+
 ## [0.0.3] - 2025-06-03
 - Updated README
 
