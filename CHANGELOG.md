@@ -1,3 +1,7 @@
+## [0.0.5] - 2025-06-06
+- Added issue templates for bug reports and feature requests.
+- Improved documentation for better clarity and usability.
+
 ## [0.0.4] - 2025-06-05
 - Implemented documentation for code and improved readme file.
 

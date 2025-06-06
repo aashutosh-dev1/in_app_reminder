@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/services.dart';
 import 'package:in_app_reminder/utils.dart';
 
@@ -31,9 +29,18 @@ class InAppReminder {
     final Map<String, dynamic> args = {
       'title': title,
       if (notes != null) 'notes': notes, // Optional notes
-      if (dateTime != null) 'dateTime': dateTime.toUtc().toIso8601String(), // Set the reminder for 2 minutes from now
-      if (frequency != ReminderFrequency.none) 'frequency': frequency.name, // Change to weekly, monthly, or yearly as needed
+      if (dateTime != null)
+        'dateTime':
+            dateTime
+                .toUtc()
+                .toIso8601String(), // Set the reminder for 2 minutes from now
+      if (frequency != ReminderFrequency.none)
+        'frequency':
+            frequency.name, // Change to weekly, monthly, or yearly as needed
     };
-    await _channel.invokeMethod('addReminder', args); // Invoke the native method to add the reminder
+    await _channel.invokeMethod(
+      'addReminder',
+      args,
+    ); // Invoke the native method to add the reminder
   }
 }

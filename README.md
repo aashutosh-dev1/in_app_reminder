@@ -27,16 +27,10 @@ To enable reminder functionality on iOS, you must include the `NSRemindersUsageD
 | iOS Reminders   | ✅             |
 | Android Support | ❌ Coming soon |
 
-## Installation
+## Issues and Contributions
+If you encounter any issues or have suggestions for improvements, please open an issue on the [GitHub repository](https://github.com/aashutosh-dev1/in_app_reminder/issues).  
+Contributions are welcome! Feel free to submit pull requests for bug fixes or enhancements.
 
-Add `in_app_reminder` to your `pubspec.yaml` file:
-
-```yaml
-dependencies:
-  in_app_reminder: ^0.0.4
-```
-
-Then, run `flutter pub get` to install the package.
 
 ## Future Development
 

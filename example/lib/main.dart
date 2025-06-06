@@ -16,7 +16,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   /// Add a reminder to the device's Reminders app.
   ///
   /// [title] is the title of the reminder.
@@ -27,8 +26,11 @@ class _MyAppState extends State<MyApp> {
     try {
       InAppReminder.addReminder(
         title: 'Title for Reminder', // Title of the reminder
-        notes: 'Notes for the reminder', // Optional notes// Set the reminder for 2 minutes from now
-        frequency: ReminderFrequency.daily, // Change to weekly, monthly, or yearly as needed
+        notes:
+            'Notes for the reminder', // Optional notes// Set the reminder for 2 minutes from now
+        frequency:
+            ReminderFrequency
+                .daily, // Change to weekly, monthly, or yearly as needed
       );
     } catch (e) {
       log('Error adding reminder: $e');
@@ -42,7 +44,8 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(title: const Text('Plugin example app')),
         body: Center(
           child: ElevatedButton(
-            onPressed: addToReminder, // Add a reminder to the device's Reminders app.
+            onPressed:
+                addToReminder, // Add a reminder to the device's Reminders app.
             child: const Text("Add iOS Reminder"),
           ),
         ),
