@@ -20,6 +20,7 @@ To enable reminder functionality on iOS, you must include the `NSRemindersUsageD
 <string>This app needs access to your reminders to add new reminders directly from the app.</string>
 ```
 
+
 ## Platform Support
 
 | Feature         | Supported      |

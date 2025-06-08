@@ -24,14 +24,16 @@ class _MyAppState extends State<MyApp> {
   /// [frequency] is the frequency of the reminder.
   Future<void> addToReminder() async {
     try {
-      InAppReminder.addReminder(
-        title: 'Title for Reminder', // Title of the reminder
-        notes:
-            'Notes for the reminder', // Optional notes// Set the reminder for 2 minutes from now
-        frequency:
-            ReminderFrequency
-                .daily, // Change to weekly, monthly, or yearly as needed
+      final success = await InAppReminder.addReminder(
+        title: 'Title for Reminder',
+        notes: 'Notes for the reminder',
+        frequency: ReminderFrequency.daily,
       );
+      if (success) {
+        log('Reminder added successfully');
+      } else {
+        log('Failed to add reminder');
+      }
     } catch (e) {
       log('Error adding reminder: $e');
     }
@@ -41,11 +43,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Plugin example app')),
+        appBar: AppBar(title: const Text('In-App Reminder Example')),
         body: Center(
           child: ElevatedButton(
-            onPressed:
-                addToReminder, // Add a reminder to the device's Reminders app.
+            onPressed: addToReminder,
             child: const Text("Add iOS Reminder"),
           ),
         ),

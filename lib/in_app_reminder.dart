@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/services.dart';
 import 'package:in_app_reminder/utils.dart';
 
@@ -16,11 +18,13 @@ class InAppReminder {
 
   /// Add a reminder to the device's Reminders app.
   ///
+  ///
   /// [title] is the title of the reminder.
   /// [notes] is the notes of the reminder.
   /// [dateTime] is the date and time of the reminder.
   /// [frequency] is the frequency of the reminder.
-  static Future<void> addReminder({
+  /// Returns true if the reminder was added successfully, false otherwise.
+  static Future<bool> addReminder({
     required String title,
     String? notes,
     DateTime? dateTime,
@@ -38,9 +42,22 @@ class InAppReminder {
         'frequency':
             frequency.name, // Change to weekly, monthly, or yearly as needed
     };
-    await _channel.invokeMethod(
-      'addReminder',
-      args,
-    ); // Invoke the native method to add the reminder
+    try {
+      final res = await _channel.invokeMethod('addReminder', args);
+      if (res == "Reminder added") {
+        // Log the result for debugging purposes
+        log('$res');
+        // Return true to indicate success
+        return true;
+      }
+      // If the result is not "Reminder added", log it and return false
+      log('Unexpected response from native code: $res');
+      return false;
+    } catch (e) {
+      // Log the error for debugging purposes
+      log('Failed to add reminder: $e');
+      // Return false to indicate failure
+      return false;
+    }
   }
 }

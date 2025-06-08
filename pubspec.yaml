@@ -1,6 +1,6 @@
 name: in_app_reminder
 description: A Flutter plugin for creating native reminders with support for title, notes, time, and repeat intervals. Currently available for iOS only.
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/aashutosh-dev1/in_app_reminder
 repository: https://github.com/aashutosh-dev1/in_app_reminder
 issue_tracker: https://github.com/aashutosh-dev1/in_app_reminder/issues
