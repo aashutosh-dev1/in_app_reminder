@@ -1,3 +1,7 @@
+## [0.0.7] - 2025-06-26
+- Updated Readme 
+- Public api's not available for android side, till date.
+
 ## [0.0.6] - 2025-06-07
 - Added boolean for successful reminder creation.
 - Improved error handling for reminder creation.

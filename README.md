@@ -26,13 +26,8 @@ To enable reminder functionality on iOS, you must include the `NSRemindersUsageD
 | Feature         | Supported      |
 |-----------------|----------------|
 | iOS Reminders   | ✅             |
-| Android Support | ❌ Coming soon |
+| Android Support | ❌ Not Supported|
 
 ## Issues and Contributions
 If you encounter any issues or have suggestions for improvements, please open an issue on the [GitHub repository](https://github.com/aashutosh-dev1/in_app_reminder/issues).  
 Contributions are welcome! Feel free to submit pull requests for bug fixes or enhancements.
-
-
-## Future Development
-
-* Android support is planned for a future release.
